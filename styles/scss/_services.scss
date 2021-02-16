@@ -1,0 +1,88 @@
+.services{
+
+}
+
+
+.services-block__item{
+  margin: 15px 0;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  font-size:  14px;
+  font-weight: 700;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: $xl) {
+    min-height: 100px;
+    font-size: 20px;
+  }
+  @media (min-width: $xxl) {
+    min-height: 150px;
+    margin: 30px 0;
+    font-size: 30px;
+  }
+
+  img{
+    display: inline-block;
+    margin: 0 30px 0 10px;
+    width: 40px;
+    vertical-align: center;
+    @media (min-width: $xl){
+      width: 80px;
+      margin: 0 50px;
+    }
+  }
+  .services-block__bg{
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+
+  }
+  .bg-pink{
+    position: absolute;
+    top:0; right: 0; left: 0; bottom: 0;
+    opacity: 0.85;
+    z-index: -1;
+  }
+}
+
+.services-container{
+  @media (min-width: $lg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div{
+      width: 55%;
+      margin: 10px 50px 10px 10px;
+    }
+    .services-block{
+      margin: 30px 0;
+      width: 50%;
+    }
+  }
+  @media (min-width: $xl) {
+    & > div{
+      width: 50%;
+      margin: 10px 50px 10px 10px;
+    }
+    .services-block{
+      margin: 30px 0;
+    }
+  }
+  @media (min-width: $xxl) {
+    height: 100%;
+    & > div{
+      width: 40%;
+      margin: 10px 110px 10px 10px;
+    }
+    .services-block{
+      width: 60%;
+    }
+  }
+}

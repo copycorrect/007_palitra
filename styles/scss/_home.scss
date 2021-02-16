@@ -1,0 +1,78 @@
+.home{
+  .container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    //max-width: 1200px;
+  }
+}
+
+.home-title{
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 10px 0;
+  @media (min-width: $md) {
+    font-size: 50px;
+  }
+  @media (min-width: $lg) {
+    font-size: 90px;
+    margin: 20px 0;
+  }
+  @media (min-width: $xxl) {
+    font-size: 120px;
+    margin: 30px 0;
+  }
+}
+
+.home-description{
+  font-size: 15px;
+  margin: 5px 0 36px;
+  position: relative;
+  padding-left: 85px;
+  &:before{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 65px;
+    height: 1px;
+    left: 0;
+    background-color: $white;
+    top: 10px;
+  }
+  @media (min-width: $lg) {
+    font-size: 20px;
+    padding-left: 120px;
+    &:before{
+      height: 3px;
+      top: 50%;
+      width: 80px;
+    }
+  }
+  @media (min-width: $xl) {
+    font-size: 25px;
+  }
+  @media (min-width: $xxl) {
+    font-size: 30px;
+    padding-left: 160px;
+    &:before{
+      width: 100px;
+    }
+  }
+}
+.telegram{
+  align-self: center;
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  a{
+    display: inline-block;
+    height: 100%;
+    cursor: pointer;
+  }
+  @media (min-width: $lg) {
+    display: none;
+  }
+}
