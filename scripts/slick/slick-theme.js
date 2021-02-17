@@ -12,13 +12,13 @@ $('.works').ready(function(){
                 }
             },
             {
-                breakpoint: 786,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                 }
@@ -30,6 +30,7 @@ $('.results').ready(function(){
     $('.results-block').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 1200,

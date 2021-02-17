@@ -3,8 +3,19 @@
   display: block;
   position: relative;
   //background-color: rosybrown;
-  margin: 0 29px;
+  margin: 0;
   //height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  @media (min-width: $sm) {
+    margin: 0 5px;
+  }
+  @media (min-width: $md) {
+    margin: 0 10px;
+  }
+  @media (min-width: $xxl) {
+    margin: 0 20px;
+  }
 }
 
 .works-block__item-bg {
@@ -15,30 +26,97 @@
   //width: 100%;
   //padding-right: 20px;
   //height: 550px;
+  position: relative;
+  display: block;
+  width: 100%;
+  transition: transform 0.5s;
 
+  &::before,
+  &::after {
     display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    background: linear-gradient(180deg, rgba(60, 88, 10, 0) 35.09%, rgba(10, 13, 85, 0.5) 92.27%);
+    z-index: 2;
+  }
+
+  &::after {
+    background: $gradient-pink;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 3;
+  }
+
+
+  &:hover {
+    &:after {
+      opacity: 0.8;
+    }
+
+    img {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+  img {
     width: 100%;
-
-
+    position: relative;
+    z-index: 1;
+    transform: scale(1, 1);
+    transition: transform .5s;
+  }
 }
 
 .works-block__item-description {
   position: absolute;
-  //z-index: 1;
+  z-index: 4;
   bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
+  width: 100%;
   color: white;
-  background: linear-gradient(180deg, rgba(60, 88, 10, 0) 35.09%, rgba(10, 13, 85, 0.5) 92.27%);
+  padding: 0 15px;
+  @media (min-width: $lg) {
+    padding: 0 30px;
+  }
+  h4{
+    font-size: 14px;
+    font-weight: 700;
+    @media (min-width: $lg) {
+      font-size: 25px;
+    }
+  }
+  p{
+    font-size: 12px;
+    @media (min-width: $lg) {
+      font-size: 15px;
+    }
+  }
+}
+.button-work{
+  display: block;
 
-  &:hover {
-    background: $gradient-pink;
+  @media (min-width: $lg) {
+    width: max-content;
+    margin: 15px auto;
   }
 }
 
 .works-block {
-  margin: 0 30px;
+  margin: 10px 30px 50px;
+  @media (min-width: $lg) {
+    margin: 50px 30px;
+  }
+  @media (min-width: $xxl) {
+    margin: 50px 0;
+  }
+
   /* Arrows */
 
   /* Dots */
@@ -48,22 +126,35 @@
 
   .slick-dots {
     position: absolute;
-    bottom: -90px;
+    bottom: -40px;
     list-style: none;
     display: block;
-    text-align: right;
+    text-align: center;
     padding: 0;
     margin: 0;
     width: 100%;
+    @media (min-width: $lg) {
+      bottom: -80px;
+      text-align: right;
+    }
+    @media (min-width: $xl) {
+      bottom: -90px;
+    }
 
     li {
       position: relative;
       display: inline-block;
       height: 16px;
       width: 16px;
-      margin: 0 15px;
+      margin: 0 5px;
       padding: 0;
       cursor: pointer;
+      @media (min-width: $lg) {
+        margin: 0 10px;
+      }
+      @media (min-width: $xl) {
+        margin: 0 15px;
+      }
 
       button {
         border: 0;
@@ -135,7 +226,7 @@
     }
   }
   &.slick-disabled:before {
-    //opacity: $slick-opacity-not-active;
+    opacity: 0;
   }
   &:before {
     //font-family: $slick-font-family;
@@ -143,9 +234,14 @@
     position: absolute;
     //font-size: 20px;
     //line-height: 1;
-    background: url(../../images/slider-arr.svg) no-repeat;
-    height: 46px;
-    width: 30px;
+    background-image: url(../../images/slider-arr.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 56px;
+    width: 32px;
+    @media (min-width: $lg) {
+      background-size: 100%;
+    }
 
     //color: $slick-arrow-color;
     //opacity: $slick-opacity-default;

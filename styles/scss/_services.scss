@@ -55,7 +55,7 @@
 .services-container{
   @media (min-width: $lg) {
     display: flex;
-    align-items: center;
+    //align-items: center;
     justify-content: center;
     & > div{
       width: 55%;

@@ -10,6 +10,24 @@
   background-color: $white;
   padding: 30px 20px;
   color: #000;
+  @media (min-width: $lg) {
+    display: inline-block;
+    width: 60%;
+  }
+}
+.request-bg{
+  @media (min-width: $sm) {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  @media (min-width: $lg) {
+    display: inline-block;
+    width: 30%;
+    margin-left: 9%;
+    vertical-align: bottom;
+  }
 }
 .request-form__item{
   margin: 10px 0 50px;
@@ -53,7 +71,7 @@
 .request-form__checkbox{
   position: relative;
   padding-left: 45px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   min-height: 20px;
 
   input{

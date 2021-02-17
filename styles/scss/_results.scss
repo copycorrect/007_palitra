@@ -61,3 +61,14 @@
   }
 
 }
+.results-bg{
+  @media (min-width: $sm) {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  @media (min-width: $xl) {
+    //display: inline-block;
+    //width: calc(50% - 100px);
+  }
+}

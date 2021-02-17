@@ -41,8 +41,8 @@ let servicesAllButton = document.querySelector('._services-all');
 let servicesBlock = document.querySelector('.services-block');
 
 servicesAllButton.onclick = () => {
-    servicesBlock.classList.add('open');
-    // servicesBlock.classList.toggle('open');
+    // servicesBlock.classList.add('open');
+    servicesBlock.classList.toggle('open');
     // servicesAllButton.textContent.toggle('Скрыть дополнительные услуги Palitra Team');
 }
 
