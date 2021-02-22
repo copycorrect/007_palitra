@@ -47,7 +47,8 @@ $('.results').ready(function(){
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     vertical: true,
-                    swipeToSlide: true
+                    swipeToSlide: true,
+                    verticalSwiping: true
                 }
             }]
     });
