@@ -29,8 +29,11 @@ $('.works').ready(function(){
 $('.results').ready(function(){
     $('.results-block').slick({
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         infinite: false,
+        vertical: false,
+        adaptiveHeight: false,
+        // dots: true,
         responsive: [
             {
                 breakpoint: 1200,
@@ -41,7 +44,10 @@ $('.results').ready(function(){
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    vertical: true,
+                    swipeToSlide: true
                 }
             }]
     });
